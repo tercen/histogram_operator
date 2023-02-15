@@ -8,6 +8,7 @@ get1D <- function(df, n_bins) {
   df_out$bins <- levels(cut(hs$breaks, nrow(df_out)))
   df_out$.ci <- df$.ci[1]
   df_out$.ri <- df$.ri[1]
+  df_out$counts <- as.numeric(df_out$counts)
   return(df_out)
 }
 
@@ -25,7 +26,7 @@ get2D <- function(df, n_bins) {
   freq$y_bin <- cut(y.bin, length(y.bin) - 1)[freq[, 2]]
   colnames(freq)[1:3] <- c("x_bin_id", "y_bin_id", "count")
   freq$count <- as.numeric(freq$count)
-  freq$density <- freq$count / sum(freq$count, ny.rm = TRUE)
+  freq$density <- freq$count / sum(freq$count, na.rm = TRUE)
   
   df_out <- freq
   df_out$.ci <- df$.ci[1]
