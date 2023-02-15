@@ -3,14 +3,16 @@
   "name": "test_1D",
   "namespace": "ds0",
   "inputDataUri": "test_1D_in.csv",
-  "outputDataUri": ["test_1D_out_1.csv"],
-  "columns": [],
-  "rows": [],
+  "outputDataUri": ["test_1D_out_1.csv", "test_1D_out_2.csv", "test_1D_out_3.csv"],
+  "columns": [
+    "filename_of_zip"
+  ],
+  "rows": ["color"],
   "colors": [],
   "labels": [],
   "yAxis": "y_values",
   "xAxis": "",
-  "generatedOn": "02/15/2023 09:44:13 AM 2023",
+  "generatedOn": "02/15/2023 09:54:13 AM 2023",
   "version": "",
   "relTol": 1e-05
 }

@@ -38,7 +38,7 @@ get2D <- function(df, n_bins) {
 
 ctx <- tercenCtx()
 
-n_bins <- 10
+n_bins <- 30
 if(!is.null(ctx$op.value("n_bins"))) n_bins <- as.integer(ctx$op.value("n_bins"))
 
 if(ctx$hasXAxis | ctx$isPairwise) {
