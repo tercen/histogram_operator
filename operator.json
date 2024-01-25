@@ -1,17 +1,22 @@
 {
   "name": "Histogram Plot",
   "description": "Displays a representation of the distribution of numerical data using bars on an X,Y grid.",
-  "tags": ["data visualisation", "plot", "basic statistics"],
-  "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/histogram_operator"],
+  "tags": [
+    "data visualisation",
+    "plot"
+  ],
+  "authors": [
+    "tercen"
+  ],
+  "urls": [
+    "https://github.com/tercen/histogram_operator"
+  ],
   "properties": [
-   {
-    "kind": "DoubleProperty",
-    "name": "n_bins",
-    "defaultValue": 30,
-    "description": "Number of bins"
+    {
+      "kind": "DoubleProperty",
+      "name": "n_bins",
+      "defaultValue": 30,
+      "description": "Number of bins"
     }
   ]
 }
-
-
