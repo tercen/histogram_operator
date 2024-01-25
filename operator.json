@@ -1,6 +1,6 @@
 {
-  "name": "Histogram Plot",
-  "description": "Displays a representation of the distribution of numerical data using bars on an X,Y grid.",
+  "name": "Histogram",
+  "description": "Bins the values over the x and y axes and computes the frequency of values in each bin.",
   "tags": [
     "data visualisation",
     "plot"
