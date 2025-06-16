@@ -27,6 +27,7 @@
     "inputSpecs": [
       {
         "kind": "CrosstabSpec",
+        "metaFactors": [],
         "axis": [
           {
             "kind": "AxisSpec",
