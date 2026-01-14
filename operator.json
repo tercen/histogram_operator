@@ -72,6 +72,16 @@
                 "crosstabMapping": "x",
                 "cardinality": "0..1",
                 "factors": []
+              },
+              {
+                "kind": "MetaFactor",
+                "name": "Label",
+                "type": "",
+                "description": "Optional label factor for grouped histograms (at most 1).",
+                "ontologyMapping": "label",
+                "crosstabMapping": "label",
+                "cardinality": "0..1",
+                "factors": []
               }
             ]
           }
