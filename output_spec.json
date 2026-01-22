@@ -1,0 +1,117 @@
+{
+  "outputSpecs": [
+    {
+      "kind": "ConditionalJoinSpec",
+      "description": "Output varies based on X-axis and Label presence",
+      "alternatives": [
+        {
+          "condition": "No X-axis, no labels (1D histogram)",
+          "joinSpec": {
+            "kind": "OperatorJoinSpec",
+            "joinOperators": [
+              {
+                "kind": "JoinOperator",
+                "joinType": "left",
+                "leftPair": {
+                  "kind": "ColumnPair",
+                  "lColumns": [
+                    "Row",
+                    "Column"
+                  ],
+                  "rColumns": [
+                    "Row",
+                    "Column"
+                  ]
+                },
+                "rightRelation": {
+                  "kind": "TableRelation",
+                  "attributes": [
+                    {
+                      "kind": "Attribute",
+                      "name": "counts",
+                      "type": "double"
+                    },
+                    {
+                      "kind": "Attribute",
+                      "name": "density",
+                      "type": "double"
+                    },
+                    {
+                      "kind": "Attribute",
+                      "name": "mids",
+                      "type": "double"
+                    },
+                    {
+                      "kind": "Attribute",
+                      "name": "bins",
+                      "type": "string"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "condition": "With X-axis, no labels (2D histogram)",
+          "joinSpec": {
+            "kind": "OperatorJoinSpec",
+            "joinOperators": [
+              {
+                "kind": "JoinOperator",
+                "joinType": "left",
+                "leftPair": {
+                  "kind": "ColumnPair",
+                  "lColumns": [
+                    "Row",
+                    "Column"
+                  ],
+                  "rColumns": [
+                    "Row",
+                    "Column"
+                  ]
+                },
+                "rightRelation": {
+                  "kind": "TableRelation",
+                  "attributes": [
+                    {
+                      "kind": "Attribute",
+                      "name": "x_bin_id",
+                      "type": "double"
+                    },
+                    {
+                      "kind": "Attribute",
+                      "name": "y_bin_id",
+                      "type": "double"
+                    },
+                    {
+                      "kind": "Attribute",
+                      "name": "count",
+                      "type": "double"
+                    },
+                    {
+                      "kind": "Attribute",
+                      "name": "x_bin",
+                      "type": "string"
+                    },
+                    {
+                      "kind": "Attribute",
+                      "name": "y_bin",
+                      "type": "string"
+                    },
+                    {
+                      "kind": "Attribute",
+                      "name": "density",
+                      "type": "double"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "refactorSuggestion": "Split into histogram_1d and histogram_2d operators"
+    }
+  ]
+}
